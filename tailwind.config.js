@@ -8,6 +8,9 @@ export default {
     extend: {
       colors: {
         'dark-gray': 'rgb(20, 20, 20)'
+      },
+      fontFamily: {
+        rubik: ['Rubik', 'sans-serif']
       }
     },
   },
