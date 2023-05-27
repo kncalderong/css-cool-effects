@@ -25,8 +25,8 @@ const HoverLight = () => {
 
 
   return (
-    <section className='w-100 bg-dark-gray h-screen flex justify-center items-center' >
-      <div id="cards" className='flex flex-wrap gap-2 max-w-[916px] w-[calc(100%-20px)]' onMouseOver={() => { sethoverCards(true) }} onMouseLeave={() => { sethoverCards(false) }}>
+    <section className='w-100 bg-dark-gray h-auto sm:h-screen flex justify-center items-center' >
+      <div id="cards" className='flex flex-wrap gap-2 max-w-[768px] lg:max-w-[916px] w-[calc(100%-20px)] py-3' onMouseOver={() => { sethoverCards(true) }} onMouseLeave={() => { sethoverCards(false) }}>
         <Card icon={faBuilding} title='Apartments' content='Places to be apart. Wait, what?' hoverCards={hoverCards}  />
         <Card icon={faHorse} title='Unicorns' content='A single corn. Er, I mean horn.' hoverCards={hoverCards}  />
         <Card icon={faBlenderPhone} title='Blender Phones' content='These absolutely deserve to exist.' hoverCards={hoverCards} />
