@@ -1,4 +1,5 @@
 import HoverLight from "./components/HoverLight/HoverLight"
+import MagicalText from "./components/MagicalText/MagicalText"
 
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
   return (
     <main >
       <HoverLight />
+      <MagicalText/>
     </main>
   )
 }
