@@ -7,10 +7,37 @@ export default {
   theme: {
     extend: {
       colors: {
-        'dark-gray': 'rgb(20, 20, 20)'
+        'dark-gray': 'rgb(20, 20, 20)',
+        'dark-magic-background': 'rgb(10, 10, 10)',
+        'purple-magic': 'rgb(123, 31, 162)',
+        'violet-magic': 'rgb(103, 58, 183)',
+        'pink-magic': 'rgb(244, 143, 177)'
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif']
+      },
+      keyframes: {
+        backgroundPanKeyframe: {
+          '0%': { 'background-position': '0% center' },
+          '100%': { 'background-position': '-200% center' }
+        },
+        scaleStarKeyframe: {
+          '0%': { 'transform': 'scale(0)' },
+          '50%':{ 'transform': 'scale(1)'},
+          '100%': { 'transform': 'scale(0)' }
+        },
+        rotateStarKeyframe: {
+          '0%': { 'transform': 'rotate(0deg)' },
+          '100%': { 'transform': 'rotate(180deg)' }
+        }
+      },
+      animation: {
+        backgroundPan: 'backgroundPanKeyframe 3s linear infinite',
+        scaleStar: 'scaleStarKeyframe 700ms ease forwards',
+        rotateStar: 'rotateStarKeyframe 1000ms linear infinite'
+      },
+      backgroundSize: {
+        '200%':'200%'
       }
     },
   },
