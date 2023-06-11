@@ -11,10 +11,12 @@ export default {
         'dark-magic-background': 'rgb(10, 10, 10)',
         'purple-magic': 'rgb(123, 31, 162)',
         'violet-magic': 'rgb(103, 58, 183)',
-        'pink-magic': 'rgb(244, 143, 177)'
+        'pink-magic': 'rgb(244, 143, 177)',
+        'border-twitch': 'rgb(3,169,244)'
       },
       fontFamily: {
-        rubik: ['Rubik', 'sans-serif']
+        rubik: ['Rubik', 'sans-serif'],
+        anek: [ 'Anek Latin', 'sans-serif']
       },
       keyframes: {
         backgroundPanKeyframe: {
@@ -23,7 +25,7 @@ export default {
         },
         scaleStarKeyframe: {
           '0%': { 'transform': 'scale(0)' },
-          '50%':{ 'transform': 'scale(1)'},
+          '50%': { 'transform': 'scale(1)' },
           '100%': { 'transform': 'scale(0)' }
         },
         rotateStarKeyframe: {
@@ -37,7 +39,10 @@ export default {
         rotateStar: 'rotateStarKeyframe 1000ms linear infinite'
       },
       backgroundSize: {
-        '200%':'200%'
+        '200%': '200%'
+      },
+      aspectRatio: {
+        'twitchCard': '1 / 1.6'
       }
     },
   },

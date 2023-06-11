@@ -32,7 +32,6 @@ const MagicalText = () => {
     const intervalIds: number[] = []
     for (const star of document.getElementsByClassName("magic-star")) {
       const intervalId = setInterval(() => {
-          console.log("this is the interval for star", star)
           animateStar(star as HTMLElement)
           
         }, index++ * (interval / 3));
