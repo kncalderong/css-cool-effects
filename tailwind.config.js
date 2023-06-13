@@ -16,7 +16,9 @@ export default {
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
-        anek: [ 'Anek Latin', 'sans-serif']
+        anek: ['Anek Latin', 'sans-serif'],
+        monserrat: ['Montserrat', 'sans-serif'],
+        lobster:['Lobster', 'cursive']
       },
       keyframes: {
         backgroundPanKeyframe: {
