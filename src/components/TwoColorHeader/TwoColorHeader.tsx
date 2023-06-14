@@ -16,7 +16,7 @@ const TwoColorHeader = () => {
   }
   
   return (
-    <section className='m-0 bg-dark-gray' onMouseMove={handleMove} onTouchMove={handleMove}>
+    <section className='w-100 bg-dark-magic-background h-auto sm:h-screen flex justify-left items-center' onMouseMove={handleMove} onTouchMove={handleMove}>
       <div id="left-side" className="side w-3/5 z-[2] h-screen place-items-center grid  overflow-hidden absolute bg-dark-gray" ref={leftSideRef} >
         <h2 className='title font-monserrat text-[7vw] font-extrabold mt-0 mx-[10vw] w-[80vw] text-white'>
           Today is going to be <span className="fancy font-lobster text-[8vw] text-[#f84f39]"> aweasome </span>
