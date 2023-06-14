@@ -12,7 +12,9 @@ export default {
         'purple-magic': 'rgb(123, 31, 162)',
         'violet-magic': 'rgb(103, 58, 183)',
         'pink-magic': 'rgb(244, 143, 177)',
-        'border-twitch': 'rgb(3,169,244)'
+        'border-twitch': 'rgb(3,169,244)',
+        'menu-blue': 'rgb(61, 90, 254)',
+        'menu-light-blue': 'rgb(33, 150, 243)'
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
