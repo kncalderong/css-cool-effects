@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      inset: {
+        'tileStaggered': '0.5px'
+      },
       colors: {
         'dark-gray': 'rgb(20, 20, 20)',
         'dark-magic-background': 'rgb(10, 10, 10)',
@@ -14,13 +17,16 @@ export default {
         'pink-magic': 'rgb(244, 143, 177)',
         'border-twitch': 'rgb(3,169,244)',
         'menu-blue': 'rgb(61, 90, 254)',
-        'menu-light-blue': 'rgb(33, 150, 243)'
+        'menu-light-blue': 'rgb(33, 150, 243)',
+        'staggered-purple': 'rgb(98, 0, 234)',
+        'staggered-salmon' : 'rgb(236, 64, 122)'
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
         anek: ['Anek Latin', 'sans-serif'],
         monserrat: ['Montserrat', 'sans-serif'],
-        lobster:['Lobster', 'cursive']
+        lobster: ['Lobster', 'cursive'],
+        dancing: ['Dancing Script', 'cursive']
       },
       keyframes: {
         backgroundPanKeyframe: {
@@ -35,19 +41,24 @@ export default {
         rotateStarKeyframe: {
           '0%': { 'transform': 'rotate(0deg)' },
           '100%': { 'transform': 'rotate(180deg)' }
+        },
+        staggeredBackgroundPan: {
+          '0%': { 'background-position': '0% center' },
+          '100%': { 'background-position': '-200% center' }
         }
       },
       animation: {
         backgroundPan: 'backgroundPanKeyframe 3s linear infinite',
         scaleStar: 'scaleStarKeyframe 700ms ease forwards',
-        rotateStar: 'rotateStarKeyframe 1000ms linear infinite'
+        rotateStar: 'rotateStarKeyframe 1000ms linear infinite',
+        staggeredBackgroundPan: 'staggeredBackgroundPan 10s linear infinite'
       },
       backgroundSize: {
         '200%': '200%'
       },
       aspectRatio: {
         'twitchCard': '1 / 1.6'
-      }
+      }      
     },
   },
   plugins: [],
