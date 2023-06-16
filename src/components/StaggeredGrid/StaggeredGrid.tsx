@@ -8,8 +8,9 @@ import anime from 'animejs/lib/anime.es.js'
 const StaggeredGrid = () => {
 
   const [toggled, setToggled] = useState<boolean>(false)
-  let rows = 0
-  let columns = 0
+  const [index, setIndex] = useState<number>(1)
+  const rowsRef = useRef<number>(0)
+  const columnsRef = useRef<number>(0)
   const [numOfTiles, setNumOfTiles] = useState<number>(0)
   const tilesContainerRef = useRef<HTMLDivElement>(null)
 
@@ -23,35 +24,25 @@ const StaggeredGrid = () => {
     gridTemplateRows: 'repeat(var(--rows), 1fr)'
   }
 
-  const handleToggle = (index: number) => {
-    
-    console.log("this is triggering")
-    /* anime({
-      targets: ".tile",
-      opacity: toggled ? 1 : 0 ,
-      delay: anime.stagger(50, {
-        grid: [columns, rows],
-        from: index
-      })
-    }) */
+  const handleToggle = useCallback((index: number) => {
     if (toggled) {
       setToggled(false)
     } else {
       setToggled(true)
     }
-  }
+    setIndex(index)
+  }, [toggled])
 
   useEffect(() => {
-    
-    const handleResize = () => {
+    const handleResize = () => { //event listener to create the tiles dinamically according to sreen size
       const size = document.body.clientWidth > 800 ? 100 : 50;
-      
-      columns = Math.floor(document.body.clientWidth / size)
-      rows = Math.floor(screen.height / size)
-      
-      setNumOfTiles(columns * rows)
-      tilesContainerRef.current!.style.setProperty("--columns", `${columns}`);
-      tilesContainerRef.current!.style.setProperty("--rows", `${rows}`);
+
+      columnsRef.current = Math.floor(document.body.clientWidth / size)
+      rowsRef.current = Math.floor(screen.height / size)
+
+      setNumOfTiles(columnsRef.current * rowsRef.current)
+      tilesContainerRef.current!.style.setProperty("--columns", `${columnsRef.current}`);
+      tilesContainerRef.current!.style.setProperty("--rows", `${rowsRef.current}`);
     }
 
     handleResize()
@@ -62,11 +53,22 @@ const StaggeredGrid = () => {
   }, [])
 
   const tiles = useMemo(() => {
-   return Array.from({ length: numOfTiles }, (_, index) => {
-    return <Tile toggled={toggled} key={index} handleToggle={handleToggle} index={index} />
+    return Array.from({ length: numOfTiles }, (_, index) => {
+      return <Tile toggled={toggled} key={index} handleToggle={handleToggle} index={index} />
     })
-  },[toggled ])  
-  
+  }, [toggled, numOfTiles, handleToggle])
+
+  useEffect(() => {
+    anime({ //the animejs effect has to be added once the component has been mounted(the tiles one), that's the reason why we put tiles dependency in the dependencies array
+      targets: ".tile",
+      opacity: toggled ? 0 : 1,
+      delay: anime.stagger(50, {
+        grid: [columnsRef.current, rowsRef.current],
+        from: index
+      })
+    })
+  }, [toggled, tiles, index])
+
 
   return (
     <section className={`w-100 h-auto sm:h-screen overflow-hidden relative ${toggled ? 'animate-none' : 'animate-staggeredBackgroundPan'}`} style={styleContainer}>
