@@ -26,7 +26,8 @@ export default {
         anek: ['Anek Latin', 'sans-serif'],
         monserrat: ['Montserrat', 'sans-serif'],
         lobster: ['Lobster', 'cursive'],
-        dancing: ['Dancing Script', 'cursive']
+        dancing: ['Dancing Script', 'cursive'],
+        ibarra: ['Ibarra Real Nova', 'serif']
       },
       keyframes: {
         backgroundPanKeyframe: {
@@ -58,7 +59,10 @@ export default {
       },
       aspectRatio: {
         'twitchCard': '1 / 1.6'
-      }      
+      },
+      margin: {
+        clampMenu: 'clamp(4rem, 20vw, 48rem)'
+      }
     },
   },
   plugins: [],
