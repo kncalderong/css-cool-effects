@@ -2,11 +2,14 @@ import { faChess } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useState, useEffect, useRef, useMemo, useCallback } from "react"
 import Tile from "./Tile"
+import anime from 'animejs/lib/anime.es.js'
 
 
 const StaggeredGrid = () => {
 
   const [toggled, setToggled] = useState<boolean>(false)
+  let rows = 0
+  let columns = 0
   const [numOfTiles, setNumOfTiles] = useState<number>(0)
   const tilesContainerRef = useRef<HTMLDivElement>(null)
 
@@ -20,28 +23,32 @@ const StaggeredGrid = () => {
     gridTemplateRows: 'repeat(var(--rows), 1fr)'
   }
 
-  const handleToggle =  useCallback(() => {
+  const handleToggle = (index: number) => {
+    
+    console.log("this is triggering")
+    /* anime({
+      targets: ".tile",
+      opacity: toggled ? 1 : 0 ,
+      delay: anime.stagger(50, {
+        grid: [columns, rows],
+        from: index
+      })
+    }) */
     if (toggled) {
       setToggled(false)
     } else {
       setToggled(true)
     }
-  }, [toggled]) 
-  
+  }
 
   useEffect(() => {
-    let rows = 0
-    let columns = 0
+    
     const handleResize = () => {
       const size = document.body.clientWidth > 800 ? 100 : 50;
-
-      console.log("height: ", screen.height)
-      console.log("size: ", size)
       
       columns = Math.floor(document.body.clientWidth / size)
       rows = Math.floor(screen.height / size)
-
-      console.log("rows: ", rows)
+      
       setNumOfTiles(columns * rows)
       tilesContainerRef.current!.style.setProperty("--columns", `${columns}`);
       tilesContainerRef.current!.style.setProperty("--rows", `${rows}`);
@@ -55,10 +62,11 @@ const StaggeredGrid = () => {
   }, [])
 
   const tiles = useMemo(() => {
-    return Array.from({ length: numOfTiles }, (_, index) => {
-      return <Tile toggled={toggled} key={index} handleToggle={handleToggle} />
+   return Array.from({ length: numOfTiles }, (_, index) => {
+    return <Tile toggled={toggled} key={index} handleToggle={handleToggle} index={index} />
     })
-  }, [numOfTiles,handleToggle,toggled]) 
+  },[toggled ])  
+  
 
   return (
     <section className={`w-100 h-auto sm:h-screen overflow-hidden relative ${toggled ? 'animate-none' : 'animate-staggeredBackgroundPan'}`} style={styleContainer}>
