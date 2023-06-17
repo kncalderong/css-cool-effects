@@ -1,6 +1,7 @@
 import HoverLight from "./components/HoverLight/HoverLight"
 import MagicalText from "./components/MagicalText/MagicalText"
 import MenuHover from "./components/MenuHover/MenuHover"
+import MouseTrailer from "./components/MouseTrailer/MouseTrailer"
 import ParallaxMenu from "./components/ParallaxMenu/ParallaxMenu"
 import StaggeredGrid from "./components/StaggeredGrid/StaggeredGrid"
 import TwitchCard from "./components/TwitchCard/TwitchCard"
@@ -16,7 +17,8 @@ function App() {
       <TwoColorHeader />
       <MenuHover />
       <StaggeredGrid />
-      <ParallaxMenu/>
+      <ParallaxMenu />
+      <MouseTrailer/>
     </main>
   )
 }
