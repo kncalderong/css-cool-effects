@@ -58,7 +58,8 @@ export default {
         '200%': '200%'
       },
       aspectRatio: {
-        'twitchCard': '1 / 1.6'
+        'twitchCard': '1 / 1.6',
+        'mouseTrailerCard': '1 / 1.5'
       },
       margin: {
         clampMenu: 'clamp(4rem, 20vw, 48rem)'
