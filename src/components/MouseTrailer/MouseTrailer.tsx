@@ -45,7 +45,7 @@ const MouseTrailer = () => {
         onMouseEnter={() => { setInteractingType("video") }}
         onMouseLeave={() => { setInteractingType("") }}
       >
-        <a href="" target="_blank" className='w-full h-full absolute left-0 top-0'></a>
+        {/* <a href="" target="_blank" className='w-full h-full absolute left-0 top-0'></a> */}
       </div>
     </section>
   )

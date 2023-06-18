@@ -1,4 +1,5 @@
 import HoverLight from "./components/HoverLight/HoverLight"
+import KippoHoverCard from "./components/KippoHoverCard/KippoHoverCard"
 import MagicalText from "./components/MagicalText/MagicalText"
 import MenuHover from "./components/MenuHover/MenuHover"
 import MouseTrailer from "./components/MouseTrailer/MouseTrailer"
@@ -18,7 +19,8 @@ function App() {
       <MenuHover />
       <StaggeredGrid />
       <ParallaxMenu />
-      <MouseTrailer/>
+      <MouseTrailer />
+      <KippoHoverCard/>
     </main>
   )
 }
