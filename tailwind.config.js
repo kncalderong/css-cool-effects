@@ -59,7 +59,8 @@ export default {
       },
       aspectRatio: {
         'twitchCard': '1 / 1.6',
-        'mouseTrailerCard': '1 / 1.5'
+        'mouseTrailerCard': '1 / 1.5',
+        'kippoHoverCard': '5 / 7' 
       },
       margin: {
         clampMenu: 'clamp(4rem, 20vw, 48rem)'
