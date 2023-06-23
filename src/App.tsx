@@ -1,3 +1,4 @@
+import GlideImageGallery from "./components/GlideImageGallery/GlideImageGallery"
 import HoverLight from "./components/HoverLight/HoverLight"
 import KippoHoverCard from "./components/KippoHoverCard/KippoHoverCard"
 import MagicalText from "./components/MagicalText/MagicalText"
@@ -20,7 +21,8 @@ function App() {
       <StaggeredGrid />
       <ParallaxMenu />
       <MouseTrailer />
-      <KippoHoverCard/>
+      <KippoHoverCard />
+      <GlideImageGallery/>
     </main>
   )
 }
