@@ -6,7 +6,6 @@ const GlideImageGallery = () => {
   const galleryRef = useRef<HTMLDivElement>(null)
 
   const handleMouseMovement = (e: React.MouseEvent) => {
-    console.log(e)
     const mouseX = e.clientX,
       mouseY = e.clientY;
 
@@ -22,7 +21,7 @@ const GlideImageGallery = () => {
     galleryRef.current!.animate({
       transform: `translate(${panX}px, ${panY}px)`
     }, {
-      duration: 4000,
+      duration: 6000,
       fill: "forwards",
       easing: "ease"
     })
@@ -30,7 +29,7 @@ const GlideImageGallery = () => {
 
   return (
     <section className="w-full h-screen bg-dark-gray overflow-hidden relative" onMouseMove={handleMouseMovement}>
-      <div className="gallery h-[140vmax] w-[140vmax] absolute" ref={galleryRef}>
+      <div className="gallery h-[100vmax] w-[110vmax] absolute" ref={galleryRef}>
         <Tile img='https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjF8fHJhbmRvbSUyMG9iamVjdHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=70' additionalStyles="bg-[rgb(255,238,88)] h-[14%] w-[20%] left-[5%] top-[5%]" />
         <Tile img="https://images.unsplash.com/photo-1515266591878-f93e32bc5937?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsdWV8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=70" additionalStyles="bg-[rgb(66,165,245)] h-[24%] w-[14%] left-[42%] top-[12%]" />
         <Tile img="https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwb2JqZWN0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=70" additionalStyles="bg-[rgb(239,83,80)] h-[18%] w-[16%] left-[12%] top-[34%]" />
