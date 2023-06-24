@@ -1,3 +1,4 @@
+import CarouselPortfolio from "./components/CarouselPortfolio/CarouselPortfolio"
 import GlideImageGallery from "./components/GlideImageGallery/GlideImageGallery"
 import HoverLight from "./components/HoverLight/HoverLight"
 import KippoHoverCard from "./components/KippoHoverCard/KippoHoverCard"
@@ -22,7 +23,8 @@ function App() {
       <ParallaxMenu />
       <MouseTrailer />
       <KippoHoverCard />
-      <GlideImageGallery/>
+      <GlideImageGallery />
+      <CarouselPortfolio/>
     </main>
   )
 }

@@ -19,7 +19,9 @@ export default {
         'menu-blue': 'rgb(61, 90, 254)',
         'menu-light-blue': 'rgb(33, 150, 243)',
         'staggered-purple': 'rgb(98, 0, 234)',
-        'staggered-salmon' : 'rgb(236, 64, 122)'
+        'staggered-salmon': 'rgb(236, 64, 122)',
+        'hover-highlight-portfolio': 'rgb(126, 87, 194)',
+        'border-portfolio': 'rgb(255, 255, 255, 0.1)'
       },
       fontFamily: {
         rubik: ['Rubik', 'sans-serif'],
@@ -64,6 +66,12 @@ export default {
       },
       margin: {
         clampMenu: 'clamp(4rem, 20vw, 48rem)'
+      },
+      gridTemplateColumns: {
+        'portfolioSliderCol': '2fr 1fr'
+      },
+      gridTemplateRows: {
+        'portfolioSliderRow': '2fr 1fr'
       }
     },
   },
