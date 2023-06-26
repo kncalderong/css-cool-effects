@@ -2,6 +2,7 @@ import CarouselPortfolio from "./components/CarouselPortfolio/CarouselPortfolio"
 import GlideImageGallery from "./components/GlideImageGallery/GlideImageGallery"
 import HoverLight from "./components/HoverLight/HoverLight"
 import KippoHoverCard from "./components/KippoHoverCard/KippoHoverCard"
+import LivingShapes from "./components/LivingShapes/LivingShapes"
 import MagicalText from "./components/MagicalText/MagicalText"
 import MenuHover from "./components/MenuHover/MenuHover"
 import MouseMoveGallery from "./components/MouseMoveGallery/MouseMoveGallery"
@@ -26,7 +27,8 @@ function App() {
       <KippoHoverCard />
       <GlideImageGallery />
       <CarouselPortfolio />
-      <MouseMoveGallery/>
+      <MouseMoveGallery />
+      <LivingShapes/>
     </main>
   )
 }
