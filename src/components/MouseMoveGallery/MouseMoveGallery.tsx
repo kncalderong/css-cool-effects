@@ -29,18 +29,16 @@ const MouseMoveGallery = () => {
   const [globalIndex, setGlobalIndex] = useState<number>(0)
   const [leadIndex, setLeadIndex] = useState<number>(0)
   const [tailIndex, setTailIndex] = useState<number | null>(null)
-  const [lastImage, setLastImage] = useState<LastImageType>({x: 0, y: 0})
+  const [lastImagePosition, setLastImagePosition] = useState<LastImageType>({x: 0, y: 0})
   const [activeInfo, setActiveInfo] = useState<InfoActiveType>({left: 0, top: 0, zIndex: 0})
   
-  
   const distanceFromLast = (x: number, y:number) => {
-    return Math.hypot(x - lastImage.x, y - lastImage.y)
+    return Math.hypot(x - lastImagePosition.x, y - lastImagePosition.y)
   }
-  
   
   const handleMovement = (e: React.MouseEvent | React.TouchEvent) => {
     if (e.nativeEvent instanceof MouseEvent) {      
-      if (distanceFromLast(e.nativeEvent.clientX, e.nativeEvent.clientY) > (window.innerWidth / 18)) { // if mouse has moved at least a /20 part of the screen from the last image position
+      if (distanceFromLast(e.nativeEvent.clientX, e.nativeEvent.clientY) > (window.innerWidth / 18)) { // if mouse has moved at least a /18 part of the screen from the last image position
         const lead = imagesData[globalIndex % imagesData.length] //this will calc how much distance is between indexes, beacuse the devision always will throw same remainders
         setLeadIndex(imagesData.indexOf(lead)) 
         setActiveInfo({
@@ -48,7 +46,7 @@ const MouseMoveGallery = () => {
           top: e.nativeEvent.clientY,
           zIndex: leadIndex
         })
-        setLastImage({
+        setLastImagePosition({
           x: e.nativeEvent.clientX,
           y: e.nativeEvent.clientY
         })
@@ -59,11 +57,28 @@ const MouseMoveGallery = () => {
         setGlobalIndex(globalIndex + 1)
       }
     }
-
-    /* if (e.nativeEvent instanceof TouchEvent) {      
-      const touchPos = e.nativeEvent.touches[0]
-
-    } */
+    
+    if (e.nativeEvent instanceof TouchEvent) {      
+      const touchPos = e.nativeEvent.touches[0]      
+      if (distanceFromLast(touchPos.clientX, touchPos.clientY) > (window.innerWidth / 18)) { // if mouse has moved at least a /18 part of the screen from the last image position
+        const lead = imagesData[globalIndex % imagesData.length] //this will calc how much distance is between indexes, beacuse the devision always will throw same remainders
+        setLeadIndex(imagesData.indexOf(lead)) 
+        setActiveInfo({
+          left: touchPos.clientX,
+          top: touchPos.clientY,
+          zIndex: leadIndex
+        })
+        setLastImagePosition({
+          x: touchPos.clientX,
+          y: touchPos.clientY
+        })
+        const tail = imagesData[(globalIndex - 5) % imagesData.length]
+        if (tail) {
+          setTailIndex(imagesData.indexOf(tail))
+        }        
+        setGlobalIndex(globalIndex + 1)
+      }
+    }
   }
   
   
