@@ -30,7 +30,6 @@ const LivingShapes = () => {
       const index = uniqueRand(0, combinations.length - 1, previous)
       setActiveCombination(combinations[index])
       setPrevious(index)
-      console.log('interval triggered')
     }, 2500)
 
     return () => {
