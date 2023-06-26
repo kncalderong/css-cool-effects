@@ -10,9 +10,6 @@ type ArticleSliderProps = {
 }
 
 const ArticleSlider = ({ textInfo, title, bgImage, position, handleCarousel }: ArticleSliderProps) => {
-  
-  console.log(title, position)
-  
   const bannerStyles = {
     backgroundImage: `url("${bgImage}")`,
     backgroundPosition: "center",
