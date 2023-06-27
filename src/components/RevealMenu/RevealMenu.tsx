@@ -13,8 +13,6 @@ const RevealMenu = () => {
     transition: 'transform 500ms cubic-bezier(.13,.53,.38,.97)'
   }
   
-  
-  
   const navLinksContainerStyle = {
     transform: `${isNavOpen ? 'translateY(-100%) scale(1)' : 'translateY(70%) scale(0.9)'}`,
     transition: 'transform 500ms cubic-bezier(.13,.53,.38,.97)'
@@ -48,7 +46,7 @@ const RevealMenu = () => {
         </div>
       </nav>
 
-      <button id="nav-toggle" type="button" className={`w-20 h-20 fixed z-[3] left-1/2 bottom-12 -translate-x-1/2 ${isNavOpen ? 'bg-[rgb(85,130,149)]' : 'bg-[rgb(182,142,113)]'} border-none  rounded-full outline-none shadow-lg transition-all duration-300 ease-in hover:scale-[1.04] active:scale-[0.96]` } onMouseEnter={()=>setIsHoverToggle(true)} onMouseLeave={()=>setIsHoverToggle(false)} onClick={()=>setIsNavOpen(!isNavOpen)}>
+      <button id="nav-toggle" type="button" className={`w-20 h-20 absolute z-[3] left-1/2 bottom-12 -translate-x-1/2 ${isNavOpen ? 'bg-[rgb(85,130,149)]' : 'bg-[rgb(182,142,113)]'} border-none  rounded-full outline-none shadow-lg transition-all duration-300 ease-in hover:scale-[1.04] active:scale-[0.96]` } onMouseEnter={()=>setIsHoverToggle(true)} onMouseLeave={()=>setIsHoverToggle(false)} onClick={()=>setIsNavOpen(!isNavOpen)}>
         <FontAwesomeIcon icon={faBarsStaggered} className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.9] text-3xl ${(!isNavOpen && isHoverToggle) ? 'opacity-100 scale-100' : 'opacity-0'} transition-all duration-300 ease-in`} color={'rgb(246, 231, 224)'} />
         <FontAwesomeIcon icon={faXmark} className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 scale-[0.9] text-3xl ${isNavOpen ? 'opacity-100 scale-100' : 'opacity-0'} transition-all duration-300 ease-in`} color={'rgb(246, 231, 224)'} />
       </button>
