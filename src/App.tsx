@@ -9,6 +9,7 @@ import MouseMoveGallery from "./components/MouseMoveGallery/MouseMoveGallery"
 import MouseTrailer from "./components/MouseTrailer/MouseTrailer"
 import ParallaxMenu from "./components/ParallaxMenu/ParallaxMenu"
 import RevealMenu from "./components/RevealMenu/RevealMenu"
+import SlidingImageTrack from "./components/SlidingImageTrack/SlidingImageTrack"
 import StaggeredGrid from "./components/StaggeredGrid/StaggeredGrid"
 import TwitchCard from "./components/TwitchCard/TwitchCard"
 import TwoColorHeader from "./components/TwoColorHeader/TwoColorHeader"
@@ -30,7 +31,8 @@ function App() {
       <CarouselPortfolio />
       <MouseMoveGallery />
       <LivingShapes />
-      <RevealMenu/>
+      <RevealMenu />
+      <SlidingImageTrack/>
     </main>
   )
 }
