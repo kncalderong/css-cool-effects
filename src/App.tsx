@@ -1,5 +1,6 @@
 import CarouselPortfolio from "./components/CarouselPortfolio/CarouselPortfolio"
 import GlideImageGallery from "./components/GlideImageGallery/GlideImageGallery"
+import HackedTextEffect from "./components/HackedTextEffect/HackedTextEffect"
 import HoverExplosion from "./components/HoverExplosion/HoverExplosion"
 import HoverLight from "./components/HoverLight/HoverLight"
 import KippoHoverCard from "./components/KippoHoverCard/KippoHoverCard"
@@ -35,6 +36,7 @@ function App() {
       <RevealMenu />
       <SlidingImageTrack />
       <HoverExplosion />
+      <HackedTextEffect />
     </main>
   )
 }

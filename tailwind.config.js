@@ -29,7 +29,8 @@ export default {
         monserrat: ['Montserrat', 'sans-serif'],
         lobster: ['Lobster', 'cursive'],
         dancing: ['Dancing Script', 'cursive'],
-        ibarra: ['Ibarra Real Nova', 'serif']
+        ibarra: ['Ibarra Real Nova', 'serif'],
+        spaceMono: ['Space Mono', 'monospace']
       },
       keyframes: {
         backgroundPanKeyframe: {
