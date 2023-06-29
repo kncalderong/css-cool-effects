@@ -48,13 +48,19 @@ export default {
         staggeredBackgroundPan: {
           '0%': { 'background-position': '0% center' },
           '100%': { 'background-position': '-200% center' }
+        },
+        floatHoverExplosionKeyframe: {
+          '0%': { 'transform': 'translateY(-0%)' },
+          '50%': { 'transform': 'translateY(-3%)' },
+          '100%': { 'transform': 'translateY(-0%)' }
         }
       },
       animation: {
         backgroundPan: 'backgroundPanKeyframe 3s linear infinite',
         scaleStar: 'scaleStarKeyframe 700ms ease forwards',
         rotateStar: 'rotateStarKeyframe 1000ms linear infinite',
-        staggeredBackgroundPan: 'staggeredBackgroundPan 10s linear infinite'
+        staggeredBackgroundPan: 'staggeredBackgroundPan 10s linear infinite',
+        floatHoverExplosion: 'floatHoverExplosionKeyframe 5s ease infinite'
       },
       backgroundSize: {
         '200%': '200%'

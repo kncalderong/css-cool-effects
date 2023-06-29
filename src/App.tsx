@@ -1,5 +1,6 @@
 import CarouselPortfolio from "./components/CarouselPortfolio/CarouselPortfolio"
 import GlideImageGallery from "./components/GlideImageGallery/GlideImageGallery"
+import HoverExplosion from "./components/HoverExplosion/HoverExplosion"
 import HoverLight from "./components/HoverLight/HoverLight"
 import KippoHoverCard from "./components/KippoHoverCard/KippoHoverCard"
 import LivingShapes from "./components/LivingShapes/LivingShapes"
@@ -32,7 +33,8 @@ function App() {
       <MouseMoveGallery />
       <LivingShapes />
       <RevealMenu />
-      <SlidingImageTrack/>
+      <SlidingImageTrack />
+      <HoverExplosion />
     </main>
   )
 }
