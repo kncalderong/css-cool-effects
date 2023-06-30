@@ -54,6 +54,11 @@ export default {
           '0%': { 'transform': 'translateY(-0%)' },
           '50%': { 'transform': 'translateY(-3%)' },
           '100%': { 'transform': 'translateY(-0%)' }
+        },
+        rotateBlobEffectKeyframe: {
+          '0%': { 'rotate': '0deg' },
+          '50%': { 'scale': '1 1.2' },
+          '100%': { 'rotate': '360deg' }
         }
       },
       animation: {
@@ -61,7 +66,8 @@ export default {
         scaleStar: 'scaleStarKeyframe 700ms ease forwards',
         rotateStar: 'rotateStarKeyframe 1000ms linear infinite',
         staggeredBackgroundPan: 'staggeredBackgroundPan 10s linear infinite',
-        floatHoverExplosion: 'floatHoverExplosionKeyframe 5s ease infinite'
+        floatHoverExplosion: 'floatHoverExplosionKeyframe 5s ease infinite',
+        rotateBlobEffect: 'rotateBlobEffectKeyframe 20s infinite '
       },
       backgroundSize: {
         '200%': '200%'
