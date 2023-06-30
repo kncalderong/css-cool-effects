@@ -59,6 +59,52 @@ export default {
           '0%': { 'rotate': '0deg' },
           '50%': { 'scale': '1 1.2' },
           '100%': { 'rotate': '360deg' }
+        },
+        panOverlayKeyframe: {
+          '0%': { 'background-position': '0% 0%' },
+          '100%': { 'background-position': '0% -100%' }
+        },
+        panImageKeyframe: {
+          '0%': {
+            'background-position': '36% 42%',
+            'background-size': '200%'
+          },
+          '20%': {
+            'background-position': '30% 35%',
+            'background-size': '200%'
+          },
+          '20.0001%': { /* -- View 2 -- */
+            'background-position': '60% 85%',
+            'background-size': '500%'
+          },
+          '40%': {
+            'background-position': '49% 81%',
+            'background-size': '500%'
+          },
+          '40.0001%': { /* -- View 3 -- */
+            'background-position': '80% 42%',
+            'background-size': '300%'
+          },
+          '60%': {
+            'background-position': '84% 33%',
+            'background-size': '300%'
+          },
+          '60.0001%': { /* -- View 4 -- */
+            'background-position': '0% 0%',
+            'background-size': '300%'
+          },
+          '80%': {
+            'background-position': '15% 4%',
+            'background-size': '300%'
+          },
+          '80.0001%': { /* -- View 5 -- */
+            'background-position': '80% 10%',
+            'background-size': '300%'
+          },
+          '100%': {
+            'background-position': '72% 14%',
+            'background-size': '300%'
+          }
         }
       },
       animation: {
@@ -67,7 +113,9 @@ export default {
         rotateStar: 'rotateStarKeyframe 1000ms linear infinite',
         staggeredBackgroundPan: 'staggeredBackgroundPan 10s linear infinite',
         floatHoverExplosion: 'floatHoverExplosionKeyframe 5s ease infinite',
-        rotateBlobEffect: 'rotateBlobEffectKeyframe 20s infinite '
+        rotateBlobEffect: 'rotateBlobEffectKeyframe 20s infinite ',
+        screenOverlayEffect: 'panOverlayKeyframe 28s infinite linear',
+        panImageTVEffect: 'panImageKeyframe 18s linear infinite'
       },
       backgroundSize: {
         '200%': '200%'
@@ -75,7 +123,7 @@ export default {
       aspectRatio: {
         'twitchCard': '1 / 1.6',
         'mouseTrailerCard': '1 / 1.5',
-        'kippoHoverCard': '5 / 7' 
+        'kippoHoverCard': '5 / 7'
       },
       margin: {
         clampMenu: 'clamp(4rem, 20vw, 48rem)'
