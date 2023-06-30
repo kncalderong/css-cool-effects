@@ -1,3 +1,4 @@
+import AccentShardHover from "./components/AccentShardHover/AccentShardHover"
 import CarouselPortfolio from "./components/CarouselPortfolio/CarouselPortfolio"
 import GlideImageGallery from "./components/GlideImageGallery/GlideImageGallery"
 import HackedTextEffect from "./components/HackedTextEffect/HackedTextEffect"
@@ -38,7 +39,8 @@ function App() {
       <SlidingImageTrack />
       <HoverExplosion />
       <HackedTextEffect />
-      <HaloScreen/>
+      <HaloScreen />
+      <AccentShardHover/>
     </main>
   )
 }
