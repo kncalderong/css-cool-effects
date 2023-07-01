@@ -105,6 +105,11 @@ export default {
             'background-position': '72% 14%',
             'background-size': '300%'
           }
+        },
+        pulseKeyframe: {
+          '0%': { 'scale': '1' },
+          '50%': { 'scale': '1.08' },
+          '100%': { 'scale': '1' }
         }
       },
       animation: {
@@ -115,7 +120,8 @@ export default {
         floatHoverExplosion: 'floatHoverExplosionKeyframe 5s ease infinite',
         rotateBlobEffect: 'rotateBlobEffectKeyframe 20s infinite ',
         screenOverlayEffect: 'panOverlayKeyframe 28s infinite linear',
-        panImageTVEffect: 'panImageKeyframe 18s linear infinite'
+        panImageTVEffect: 'panImageKeyframe 18s linear infinite',
+        pulseEffect: 'pulseKeyframe 800ms ease-in-out'
       },
       backgroundSize: {
         '200%': '200%'

@@ -15,6 +15,7 @@ import ParallaxMenu from "./components/ParallaxMenu/ParallaxMenu"
 import RevealMenu from "./components/RevealMenu/RevealMenu"
 import SlidingImageTrack from "./components/SlidingImageTrack/SlidingImageTrack"
 import StaggeredGrid from "./components/StaggeredGrid/StaggeredGrid"
+import TurbulentHoverEffect from "./components/TurbulentHoverEffect/TurbulentHoverEffect"
 import TwitchCard from "./components/TwitchCard/TwitchCard"
 import TwoColorHeader from "./components/TwoColorHeader/TwoColorHeader"
 
@@ -40,7 +41,8 @@ function App() {
       <HoverExplosion />
       <HackedTextEffect />
       <HaloScreen />
-      <AccentShardHover/>
+      <AccentShardHover />
+      <TurbulentHoverEffect />
     </main>
   )
 }
