@@ -16,16 +16,19 @@ const TurbulentHoverEffect = () => {
               result="static"
             >
               <animate
-                attributeName="seed"
+                attributeName="seed" //this allows to change dinamycally the 'seed' property to create the noise effect
                 values="0;100"
                 dur="800ms"
-                repeatCount="1"
-                begin="card.mouseenter"
+                repeatCount="1" 
+                begin="card.mouseenter" //this is the trigger to the effect and start the animation
               />
-            </feTurbulence>
-            <feDisplacementMap in="SourceGraphic" in2="static">
+            </feTurbulence> 
+            <feDisplacementMap
+              in="SourceGraphic"  //this allows to show the effect over the image          
+              in2="static"            
+            > 
               <animate
-                attributeName="scale"
+                attributeName="scale" 
                 values="0;40;0"
                 dur="800ms"
                 repeatCount="1"
