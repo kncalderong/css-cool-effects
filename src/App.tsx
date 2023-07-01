@@ -23,26 +23,26 @@ function App() {
 
   return (
     <main >
-      <HoverLight />
-      <MagicalText />
-      <TwitchCard /> 
-      <TwoColorHeader />
-      <MenuHover />
       <StaggeredGrid />
+      <SlidingImageTrack />
+      <HaloScreen />
+      <TwoColorHeader />
+      <HoverLight />
+      <TwitchCard /> 
+      <TurbulentHoverEffect />
       <ParallaxMenu />
-      <MouseTrailer />
       <KippoHoverCard />
-      <GlideImageGallery />
       <CarouselPortfolio />
       <MouseMoveGallery />
       <LivingShapes />
       <RevealMenu />
-      <SlidingImageTrack />
       <HoverExplosion />
+      <GlideImageGallery />
       <HackedTextEffect />
-      <HaloScreen />
       <AccentShardHover />
-      <TurbulentHoverEffect />
+      <MouseTrailer />
+      <MenuHover />
+      <MagicalText />
     </main>
   )
 }
